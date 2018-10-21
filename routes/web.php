@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('clients.index');
 });
+Route::resource('job-type', 'JobTypeController');

@@ -4,6 +4,9 @@ Route::get('/', function () {
     return view('clients.index');
 });
 
+Route::resource('job-type', 'JobTypeController');
+
+
 Route::get('change-lang/{lang}','LangController@changeLang')->name('change-lang');
 
 Auth::routes();
@@ -18,3 +21,4 @@ Route::group(
 		Route::get('/','AdminController@index')->name('admin.index');
 	}
 );
+
